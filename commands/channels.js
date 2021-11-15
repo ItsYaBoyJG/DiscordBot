@@ -5,8 +5,7 @@ exports.commands = [
     "servers",
     "topic"
 ]
-
-exports.create = { 
+ 
     exports.create = {
         usage: "<channel name>",
         description: "creates a new text channel with the given name.",
@@ -21,9 +20,7 @@ exports.create = {
                 msg.channel.send("You don't have permission to manage channels!");
             }
         }
-    }
-}
-
+},
 exports.voice = {
 	usage: "<channel name>",
 	description: "creates a new voice channel with the give name.",

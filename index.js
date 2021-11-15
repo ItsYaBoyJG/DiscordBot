@@ -1,9 +1,9 @@
 // require the discord module
 const {Client, Intents, Collection} = require('discord.js');
-const {token} = require('.config.json');
+const {token} = require('./config.json');
 const fs = require('fs');
-
 const client = new Client({ Intents: [Intents.FLAGS.GUILDS] });
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
